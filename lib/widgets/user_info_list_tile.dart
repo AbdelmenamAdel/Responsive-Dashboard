@@ -12,12 +12,13 @@ class UserInfoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.only(right: 8),
       color: const Color(0xFFFAFAFA),
       elevation: 0,
       child: Center(
         child: ListTile(
           leading: SvgPicture.asset(
-            userInfoModel.asset,
+            userInfoModel.image,
           ),
           title: FittedBox(
             fit: BoxFit.scaleDown,
@@ -31,7 +32,7 @@ class UserInfoListTile extends StatelessWidget {
             fit: BoxFit.scaleDown,
             alignment: AlignmentDirectional.centerStart,
             child: Text(
-              userInfoModel.subtitle,
+              userInfoModel.subTitle,
               style: AppStyles.styleRegular12(context),
             ),
           ),
